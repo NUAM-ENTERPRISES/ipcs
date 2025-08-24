@@ -3,8 +3,8 @@ import {React,useState,useEffect,useRef} from "react"
 import {Link} from "react-router-dom"
 import products from "../data/product"
 import { CheckCircle2,CheckCircle,ClipboardList, Search, ShieldCheck, ChevronLeft, ChevronRight, Play, Star, ArrowUpRight, Sparkles  } from "lucide-react";
-import Homes from "../assets/Homes.jpg";
-import Home from "../assets/Home.png";
+import Homes from "../assets/Homes.jpeg";
+
 import Abouts from "../assets/Abouts.png";
 import About1 from "../assets/About1.png";
 import About2 from "../assets/About2.png";
@@ -127,7 +127,7 @@ const steps = [
     {
       icon: <ClipboardList className="w-12 h-12 text-white" />,
       title: "Professional Team Assessment – Book Your Free Inspection",
-      desc: "Easily schedule a complimentary inspection online, and our experts will promptly coordinate a convenient visit.",
+      desc: "Easily schedule a complimentary inspection online and offline, and our experts will promptly coordinate a convenient visit.",
     },
     {
       icon: <Search className="w-12 h-12 text-white" />,
@@ -210,10 +210,10 @@ const cardVariants = {
       title: "General Pest Control Service",
       subtitle: " Home Protection",
       description: " Comprehensive pest elimination for homes with family-safe, eco-friendly treatments that protect your loved ones.",
-      features: ["Safe for Kids & Pets", "Eco-Friendly Products", "One-Time & Recurring", "Satisfaction Guaranteed"],
+      features: ["Safe for Kids & Pets", "Eco-Friendly Products", "One-Time & Recurring/Annually Contract", "Satisfaction Guaranteed"],
       color: "from-emerald-400 to-teal-600",
       bgColor: "from-emerald-50 to-teal-50",
-      darkBg: "from-emerald-900/20 to-teal-900/20",
+      darkBg: "from-emerald-900 to-teal-900",
       icon: "🏠",
       // price: "Starting ₹999"
     },
@@ -225,7 +225,7 @@ const cardVariants = {
       features: ["Custom Plans", "Discreet Service", "Licensed Technicians", "Eco-Friendly Options"],
       color: "from-blue-400 to-indigo-600",
       bgColor: "from-blue-50 to-indigo-50",
-      darkBg: "from-blue-900/20 to-indigo-900/20",
+      darkBg: "from-blue-900 to-indigo-900",
       icon: "🏢",
       // price: "Custom Quote"
     },
@@ -234,69 +234,69 @@ const cardVariants = {
       title: "Termite Control Service",
       subtitle: "Structure Protection",
       description: "Advanced termite detection and elimination to protect your property's structural integrity.",
-      features: ["Pre & Post Construction", "5-Year Warranty", "Advanced Detection", "Preventive Barriers"],
+      features: ["Pre & Post Construction", "Upto 10-Year Warranty", "Advanced Detection", "Preventive Barriers"],
       color: "from-amber-400 to-orange-600",
       bgColor: "from-amber-50 to-orange-50",
-      darkBg: "from-amber-900/20 to-orange-900/20",
+      darkBg: "from-amber-900 to-orange-900",
       icon: "🛡️",
-      price: "Starting ₹2499"
+      // price: "Starting ₹2499"
     },
     {
       id: 4,
-      title: "Rodent Control",
+      title: "Rodent Control Service",
       subtitle: "Complete Elimination",
       description: "Effective rodent removal and prevention strategies to keep your space clean and hygienic.",
-      features: ["Humane Methods", "Entry Point Sealing", "Ongoing Monitoring", "Sanitation Advice"],
+      features: ["Humane Methods", "Ongoing Monitoring", "Sanitation Advice"],
       color: "from-purple-400 to-pink-600",
       bgColor: "from-purple-50 to-pink-50",
-      darkBg: "from-purple-900/20 to-pink-900/20",
+      darkBg: "from-purple-900 to-pink-900",
       icon: "🐭",
-      price: "Starting ₹1499"
+      // price: "Starting ₹1499"
     },
     {
       id: 5,
-      title: "Mosquito Control",
+      title: "Mosquito Control Service",
       subtitle: "Disease Prevention",
       description: "Targeted mosquito control to reduce disease risks and create comfortable outdoor spaces.",
       features: ["Breeding Site Treatment", "Larvicide Application", "Natural Repellents", "Seasonal Programs"],
       color: "from-cyan-400 to-blue-600",
       bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
+      darkBg: "from-cyan-900 to-blue-900",
       icon: "🦟",
-      price: "Starting ₹799"
+      // price: "Starting ₹799"
     },
     {
       id: 6,
       title: "Bed Bug Control Service",
       subtitle: " Sleep Tight",
       description: "Comprehensive bed bug control solutions for a peaceful night's sleep.",
-      features: ["Thorough Inspection", "Heat Treatment", "Chemical Solutions", "Preventive Measures"],
-      color: "from-cyan-400 to-blue-600",
-      bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
-      icon: "🦟",
-      price: "Starting ₹799"
+      features: ["Thorough Inspection", "Chemical Solutions", "Preventive Measures"],
+      color: "from-rose-400 to-red-600",
+      bgColor: "from-rose-50 to-red-50",
+      darkBg: "from-rose-900 to-red-900",
+      icon: "🛏️",
+      // price: "Starting ₹799"
     },
      {
       id: 7,
       title: "Other Services",
       subtitle: " Featured Services",
-      description: "Comprehensive bed bug control solutions for a peaceful night's sleep.",
-      features: ["a)	Flies Control Service", "b)	Snake Control Service", "c)	Disinfection Service/Sanitization control Service", "d)	Fungus control Service", "e)	Dog Tick Control Service", "f)	Stored Insects Monitoring Control Service", "g)	Silverfish & Firebrat Control Service"],
-      color: "from-cyan-400 to-blue-600",
-      bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
-      icon: "🦟",
-      price: "Starting ₹799"
+      description: "Comprehensive pest control solutions for specialized needs and situations.",
+      features: ["Flies Control Service", "Snake Control Service", "Disinfection Service", "Fungus Control Service"],
+      color: "from-indigo-400 to-purple-600",
+      bgColor: "from-indigo-50 to-purple-50",
+      darkBg: "from-indigo-900 to-purple-900",
+      icon: "⚡",
+      // price: "Starting ₹799"
     }
   ];
 
-  // Auto-play functionality
+  // Auto-play functionality - changed to 60 seconds (1 minute)
   useEffect(() => {
     if (isAutoPlaying) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % services.length);
-      }, 4000);
+      }, 7000); // Changed from 4000 to 60000 (1 minute)
     } else {
       clearInterval(intervalRef.current);
     }
@@ -348,7 +348,7 @@ const cardVariants = {
   <div className="absolute inset-0 bg-black/60"></div>
 
   {/* Content */}
-<div className="relative z-10 text-center px-4 sm:px-6 md:px-12 max-w-4xl mt-17">
+<div className="relative z-10 text-center px-4 sm:px-6 md:px-12 max-w-4xl mt-25">
   {/* Heading */}
   <motion.div
     className="text-center mb-6"
@@ -356,16 +356,13 @@ const cardVariants = {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
   >
-<span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-lg">
+<span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-serif font-black italic">
   TRUSTED PROFESSIONAL{" "}
   <span className="bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-serif font-black italic">
     PEST CONTROL
   </span>
 </span>
-
-
-
-    <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-lg mt-2">
+    <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-serif font-black italic mt-2">
       SAY GOODBYE TO   <span className="bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-serif font-black italic">
     PESTS
   </span>
@@ -395,16 +392,27 @@ const cardVariants = {
     >
       <a
         href="#booking"
-        className="px-4 sm:px-6 py-2 sm:py-3 bg-pink-600 text-white font-semibold rounded-xl shadow-lg hover:bg-pink-700 transition w-full sm:w-auto text-center"
+        className="px-4 sm:px-6 py-2 sm:py-3 
+             bg-gradient-to-r from-pink-500 to-yellow-400 
+             font-semibold rounded-xl shadow-lg 
+             hover:from-yellow-400 hover:to-pink-500
+             text-white hover:text-black
+             transition-all duration-500 ease-in-out
+             w-full sm:w-auto text-center"
       >
         Book a Free Inspection
       </a>
-      <a
-        href="tel:+918848839295"
-        className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-pink-600 font-semibold rounded-xl shadow-lg hover:bg-gray-100 transition w-full sm:w-auto text-center"
-      >
-        Call Now: +91 8848839295
-      </a>
+     <a
+  href="tel:+918848839295"
+  className="flex justify-center items-center gap-2 
+             px-4 sm:px-6 py-2 sm:py-2.5 
+             bg-white text-pink-600 font-semibold 
+             rounded-xl shadow-md transition-all duration-500 
+             w-full sm:w-auto text-center hover:bg-purple-600 hover:text-white"
+>
+  Call Now: +91 8848839295
+</a>
+
     </motion.div>
 
     {/* Trust Badges */}
@@ -418,10 +426,12 @@ const cardVariants = {
       {[
         "Government Approved Licensed Company",
         "CIB Certified",
-        "100% Safe",
+        "100% Eco-Friendly Safe",
         "Expert Techs",
         "ISO Certified",
-        "10+ Yrs Exp",
+        "10+ Yrs Exp in Pest Control Industry",
+        "24/7 Customer Support",
+        "Quality Service on Affordable Pricing"
       ].map((item, idx) => (
         <div
           key={idx}
@@ -444,14 +454,26 @@ const cardVariants = {
         <CheckCircle2 className="text-green-400" size={20} />
         <span>Government Approved Licenced PestControl Company</span>
       </div>
+       <div className="flex items-center gap-2">
+        <CheckCircle2 className="text-green-400" size={20} />
+        <span>24/7 Hours Customer Support</span>
+      </div>
+       <div className="flex items-center gap-2">
+        <CheckCircle2 className="text-green-400" size={20} />
+        <span>Professional Pest Control</span>
+      </div>
+       <div className="flex items-center gap-2">
+        <CheckCircle2 className="text-green-400" size={20} />
+        <span>Quality Service Of Affordable Pricing</span>
+      </div>
       <div className="flex items-center gap-2">
         <CheckCircle2 className="text-green-400" size={20} />
         <span>Central Insecticide Board Approved Chemicals</span>
       </div>
-      <div className="flex items-center gap-2">
+      {/* <div className="flex items-center gap-2">
         <CheckCircle2 className="text-green-400" size={20} />
-        <span>100% Safe</span>
-      </div>
+        <span>100% Eco-Friendly Safe</span>
+      </div> */}
       <div className="flex items-center gap-2">
         <CheckCircle2 className="text-green-400" size={20} />
         <span>Expert Technicians</span>
@@ -462,7 +484,7 @@ const cardVariants = {
       </div>
       <div className="flex items-center gap-2">
         <CheckCircle2 className="text-green-400" size={20} />
-        <span>10 Years Experience in Pest Control Industry</span>
+        <span>10+ Years Of Experience in Pest Control Industry</span>
       </div>
     </motion.div>
   </div>
@@ -605,60 +627,66 @@ const cardVariants = {
         </div>
       </section> 
 
-      <section id="why" className="bg-gradient-to-b from-[#1b51a1] to-[#575757] py-16 px-6 lg:px-20 text-white">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Why Families & Businesses Choose Identity Pest Control
-        </h2>
-        <p className="text-lg opacity-90">
-          Trusted by thousands of homes & businesses for safe, eco-friendly, and
-          long-lasting pest control solutions.
-        </p>
-      </div>
+    <section
+  id="why"
+  className="bg-gradient-to-b from-[#1b51a1] to-[#575757] py-16 px-6 lg:px-20 text-white"
+>
+  <div className="max-w-6xl mx-auto text-center mb-12">
+    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      Why Families & Businesses Choose Identity Pest Control
+    </h2>
+    <p className="text-lg opacity-90">
+      Trusted by thousands of homes & businesses for safe, eco-friendly, and
+      long-lasting pest control solutions.
+    </p>
+  </div>
 
-      <div className="space-y-20">
-        {points.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-10 items-center"
-          >
-            {/* Text Content */}
-            <div className={`text-left ${index % 2 === 1 ? "md:order-2" : ""}`}>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                {item.heading}
-              </h3>
-              <p className="text-base leading-relaxed">{item.description}</p>
-            </div>
+  <div className="space-y-20">
+    {points.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-10 items-center"
+      >
+        {/* Text Content */}
+        <div className={`text-left ${index % 2 === 1 ? "md:order-2" : ""}`}>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+            {item.heading}
+          </h3>
+          <p className="text-base leading-relaxed">{item.description}</p>
+        </div>
 
-            {/* Dynamic Images */}
-            <div
-              className={`grid gap-4 ${
-                item.images.length === 1
-                  ? "grid-cols-1"
-                  : item.images.length === 2
-                  ? "grid-cols-2"
-                  : "grid-cols-2 md:grid-cols-3"
-              }`}
-            >
-              {item.images.map((img, i) => (
-                <motion.img
-                  key={i}
-                  src={img}
-                  alt={item.heading}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                />
-              ))}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+        {/* Dynamic Images */}
+        <div
+          className={`grid gap-4 justify-center ${
+            item.images.length === 1
+              ? "grid-cols-1"
+              : item.images.length === 2
+              ? "grid-cols-2"
+              : "grid-cols-2 md:grid-cols-3"
+          }`}
+        >
+          {item.images.map((img, i) => (
+      <motion.img
+  key={i}
+  src={img}
+  alt={item.heading}
+  className="w-55 h-62 sm:w-66 sm:h-75 object-cover rounded-xl shadow-lg mx-auto"
+  whileHover={{ scale: 1.05 }}
+  transition={{ type: "spring", stiffness: 200 }}
+/>
+
+
+          ))}
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden relative">
       
@@ -858,7 +886,7 @@ const cardVariants = {
               className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
             >
               <Play className={`w-4 h-4 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
-              <span className="text-xs sm:text-sm">{isAutoPlaying ? 'Auto Playing' : 'Paused'}</span>
+              <span className="text-xs sm:text-sm">{isAutoPlaying ? 'Pause' : 'AutoPlay'}</span>
             </button>
             
             <a
@@ -1225,7 +1253,7 @@ const cardVariants = {
         >
           <iframe
             title="Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086867121893!2d144.95592731531565!3d-37.81720977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43b3c3c15f%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.825735395184!2d76.31881527503153!3d10.031234990075768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzUyLjUiTiA3NsKwMTknMTcuMCJF!5e0!3m2!1sen!2sin!4v1756053706157!5m2!1sen!2sin"
             className="w-full h-full border-0"
             allowFullScreen=""
             loading="lazy"

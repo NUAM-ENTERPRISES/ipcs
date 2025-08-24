@@ -516,7 +516,7 @@ export default function ModernContact() {
               >
                 <iframe
                   title="Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15711.126953125!2d76.3422851!3d9.9711989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d27b97b91f3%3A0x4b6b8c1f8b1b8b1b!2sKanayannur%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.825735395184!2d76.31881527503153!3d10.031234990075768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzUyLjUiTiA3NsKwMTknMTcuMCJF!5e0!3m2!1sen!2sin!4v1756053706157!5m2!1sen!2sin"
                   className="w-full h-full border-0"
                   allowFullScreen=""
                   loading="lazy"
