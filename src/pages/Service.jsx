@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Play, Star, ArrowUpRight, Sparkles } from "lucide-react";
 
-const ServicesCarousel = () => {
+const Service = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -17,7 +17,7 @@ const ServicesCarousel = () => {
       features: ["Safe for Kids & Pets", "Eco-Friendly Products", "One-Time & Recurring", "Satisfaction Guaranteed"],
       color: "from-emerald-400 to-teal-600",
       bgColor: "from-emerald-50 to-teal-50",
-      darkBg: "from-emerald-900/20 to-teal-900/20",
+      darkBg: "from-emerald-900 to-teal-900",
       icon: "🏠",
       // price: "Starting ₹999"
     },
@@ -29,7 +29,7 @@ const ServicesCarousel = () => {
       features: ["Custom Plans", "Discreet Service", "Licensed Technicians", "Eco-Friendly Options"],
       color: "from-blue-400 to-indigo-600",
       bgColor: "from-blue-50 to-indigo-50",
-      darkBg: "from-blue-900/20 to-indigo-900/20",
+      darkBg: "from-blue-900 to-indigo-900",
       icon: "🏢",
       // price: "Custom Quote"
     },
@@ -41,9 +41,9 @@ const ServicesCarousel = () => {
       features: ["Pre & Post Construction", "5-Year Warranty", "Advanced Detection", "Preventive Barriers"],
       color: "from-amber-400 to-orange-600",
       bgColor: "from-amber-50 to-orange-50",
-      darkBg: "from-amber-900/20 to-orange-900/20",
+      darkBg: "from-amber-900 to-orange-900",
       icon: "🛡️",
-      price: "Starting ₹2499"
+      // price: "Starting ₹2499"
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const ServicesCarousel = () => {
       features: ["Humane Methods", "Entry Point Sealing", "Ongoing Monitoring", "Sanitation Advice"],
       color: "from-purple-400 to-pink-600",
       bgColor: "from-purple-50 to-pink-50",
-      darkBg: "from-purple-900/20 to-pink-900/20",
+      darkBg: "from-purple-900 to-pink-900",
       icon: "🐭",
       price: "Starting ₹1499"
     },
@@ -65,9 +65,9 @@ const ServicesCarousel = () => {
       features: ["Breeding Site Treatment", "Larvicide Application", "Natural Repellents", "Seasonal Programs"],
       color: "from-cyan-400 to-blue-600",
       bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
+      darkBg: "from-cyan-900 to-blue-900",
       icon: "🦟",
-      price: "Starting ₹799"
+      // price: "Starting ₹799"
     },
     {
       id: 6,
@@ -75,32 +75,32 @@ const ServicesCarousel = () => {
       subtitle: " Sleep Tight",
       description: "Comprehensive bed bug control solutions for a peaceful night's sleep.",
       features: ["Thorough Inspection", "Heat Treatment", "Chemical Solutions", "Preventive Measures"],
-      color: "from-cyan-400 to-blue-600",
-      bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
-      icon: "🦟",
-      price: "Starting ₹799"
+      color: "from-rose-400 to-red-600",
+      bgColor: "from-rose-50 to-red-50",
+      darkBg: "from-rose-900 to-red-900",
+      icon: "🛏️",
+      // price: "Starting ₹799"
     },
      {
       id: 7,
       title: "Other Services",
       subtitle: " Featured Services",
-      description: "Comprehensive bed bug control solutions for a peaceful night's sleep.",
-      features: ["a)	Flies Control Service", "b)	Snake Control Service", "c)	Disinfection Service/Sanitization control Service", "d)	Fungus control Service", "e)	Dog Tick Control Service", "f)	Stored Insects Monitoring Control Service", "g)	Silverfish & Firebrat Control Service"],
-      color: "from-cyan-400 to-blue-600",
-      bgColor: "from-cyan-50 to-blue-50",
-      darkBg: "from-cyan-900/20 to-blue-900/20",
-      icon: "🦟",
-      price: "Starting ₹799"
+      description: "Comprehensive pest control solutions for specialized needs and situations.",
+      features: ["Flies Control Service", "Snake Control Service", "Disinfection Service", "Fungus Control Service"],
+      color: "from-indigo-400 to-purple-600",
+      bgColor: "from-indigo-50 to-purple-50",
+      darkBg: "from-indigo-900 to-purple-900",
+      icon: "⚡",
+      // price: "Starting ₹799"
     }
   ];
 
-  // Auto-play functionality
+  // Auto-play functionality - changed to 60 seconds (1 minute)
   useEffect(() => {
     if (isAutoPlaying) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % services.length);
-      }, 4000);
+      }, 7000); // Changed from 4000 to 60000 (1 minute)
     } else {
       clearInterval(intervalRef.current);
     }
@@ -139,13 +139,13 @@ const ServicesCarousel = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden relative">
       
-      {/* Animated Background */}
+      {/* Animated Background - reduced opacity for better visibility */}
       <div className="absolute inset-0">
         {/* Floating orbs */}
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full opacity-10 animate-pulse"
+            className="absolute rounded-full opacity-5 animate-pulse"
             style={{
               background: `radial-gradient(circle, ${services[currentIndex]?.color?.split(' ')[1] || 'rgb(59, 130, 246)'}, transparent)`,
               width: `${200 + i * 50}px`,
@@ -158,11 +158,11 @@ const ServicesCarousel = () => {
           />
         ))}
         
-        {/* Particles */}
+        {/* Particles - reduced opacity */}
         {[...Array(30)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20"
+            className="absolute w-1 h-1 bg-white rounded-full opacity-10"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -181,16 +181,16 @@ const ServicesCarousel = () => {
           
           {/* Header */}
           <div className="text-center mb-12 mt-20">
-            <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 sm:px-6 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur-sm border border-white/40 rounded-full px-4 sm:px-6 py-2 mb-6">
               <Sparkles className="w-4 h-4 text-yellow-400" />
-              <span className="text-white/80 text-sm">Our Premium Services</span>
+              <span className="text-white text-sm font-medium">Our Premium Services</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                 Professional Pest Solutions
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl mx-auto font-medium">
               Discover our comprehensive range of pest control services designed to protect your space
             </p>
           </div>
@@ -209,8 +209,8 @@ const ServicesCarousel = () => {
                 const translateX = offset * (window.innerWidth < 640 ? 80 : 120);
                 const translateZ = isActive ? 0 : -absOffset * (window.innerWidth < 640 ? 100 : 150);
                 const rotateY = isActive ? 0 : offset * (window.innerWidth < 640 ? 15 : 25);
-                const scale = isActive ? 1 : Math.max(0.7, 1 - absOffset * 0.15);
-                const opacity = isActive ? 1 : Math.max(0.3, 1 - absOffset * 0.3);
+                const scale = isActive ? 1 : Math.max(0.75, 1 - absOffset * 0.12); // Improved visibility
+                const opacity = isActive ? 1 : Math.max(0.6, 1 - absOffset * 0.2); // Better visibility for non-active cards
 
                 return (
                   <div
@@ -235,39 +235,39 @@ const ServicesCarousel = () => {
                     {/* Card */}
                     <div className={`
                       relative w-full h-full rounded-3xl overflow-hidden
-                      bg-gradient-to-br ${service.darkBg} backdrop-blur-xl
-                      border border-white/20 shadow-2xl
-                      ${isActive ? 'shadow-3xl' : ''}
+                      bg-gradient-to-br ${service.darkBg} backdrop-blur-sm
+                      border border-white/50 shadow-2xl
+                      ${isActive ? 'shadow-3xl border-white/60' : 'border-white/40'}
                     `}>
                       
-                      {/* Glow effect for active card */}
+                      {/* Enhanced glow effect for active card */}
                       {isActive && (
-                        <div className={`absolute -inset-1 bg-gradient-to-r ${service.color} opacity-20 blur-xl rounded-3xl`} />
+                        <div className={`absolute -inset-1 bg-gradient-to-r ${service.color} opacity-40 blur-xl rounded-3xl`} />
                       )}
                       
-                      {/* Card content */}
+                      {/* Card content with better visibility */}
                       <div className="relative z-10 p-6 sm:p-8 h-full flex flex-col">
                         
                         {/* Header */}
                         <div className="text-center mb-6">
                           <div className="text-3xl sm:text-4xl mb-3">{service.icon}</div>
-                          <div className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r ${service.color} text-white mb-2`}>
+                          <div className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r ${service.color} text-white mb-3 shadow-lg`}>
                             {service.subtitle}
                           </div>
-                          <h3 className="text-lg sm:text-xl font-bold text-white">{service.title}</h3>
+                          <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">{service.title}</h3>
                         </div>
 
-                        {/* Description */}
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 flex-grow">
+                        {/* Description with better visibility */}
+                        <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-6 flex-grow font-medium">
                           {service.description}
                         </p>
 
-                        {/* Features */}
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-6">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-1 text-xs sm:text-sm text-gray-300">
-                              <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
-                              <span>{feature}</span>
+                        {/* Features with better visibility */}
+                        <div className="grid grid-cols-1 gap-2 sm:gap-3 mb-6">
+                          {service.features.slice(0, 4).map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-white bg-black/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
+                              <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
+                              <span className="font-medium">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -275,14 +275,14 @@ const ServicesCarousel = () => {
                         {/* Footer */}
                         <div className="flex items-center justify-between gap-4">
                           <div className="min-w-0">
-                            <div className="text-base sm:text-lg font-bold text-white truncate">{service.price}</div>
-                            <div className="text-xs sm:text-sm text-gray-400">Best Value</div>
+                            <div className="text-base sm:text-lg font-bold text-white truncate">{service.price || "Custom Quote"}</div>
+                            <div className="text-xs sm:text-sm text-gray-300 font-medium">Best Value</div>
                           </div>
                           <button className={`
-                            group px-3 sm:px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm
-                            bg-gradient-to-r ${service.color} text-white
+                            group px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm
+                            bg-gradient-to-r ${service.color} text-white shadow-lg
                             hover:scale-105 transition-all duration-300
-                            flex items-center gap-1 shrink-0
+                            flex items-center gap-2 shrink-0
                           `}>
                             Book Now
                             <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -295,52 +295,52 @@ const ServicesCarousel = () => {
               })}
             </div>
 
-            {/* Navigation */}
+            {/* Navigation with better visibility */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black/40 backdrop-blur-sm border border-white/50 text-white hover:bg-black/60 transition-all duration-300 flex items-center justify-center group shadow-lg"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
+              <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 group-hover:-translate-x-0.5 transition-transform" />
             </button>
             
             <button
               onClick={nextSlide}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black/40 backdrop-blur-sm border border-white/50 text-white hover:bg-black/60 transition-all duration-300 flex items-center justify-center group shadow-lg"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
+              <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
 
-          {/* Indicators */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8 sm:mt-12">
+          {/* Indicators with better visibility */}
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-12">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`
-                  w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300
+                  w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 border border-white/40
                   ${index === currentIndex 
-                    ? `bg-gradient-to-r ${services[currentIndex].color} scale-125` 
-                    : 'bg-white/30 hover:bg-white/50'
+                    ? `bg-gradient-to-r ${services[currentIndex].color} scale-125 shadow-lg` 
+                    : 'bg-white/70 hover:bg-white/90'
                   }
                 `}
               />
             ))}
           </div>
 
-          {/* Auto-play control */}
+          {/* Auto-play control with 1 minute indicator */}
           <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              className="flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-black/40 backdrop-blur-sm border border-white/50 text-white hover:bg-black/60 transition-all duration-300 font-medium shadow-lg"
             >
               <Play className={`w-4 h-4 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
-              <span className="text-xs sm:text-sm">{isAutoPlaying ? 'Auto Playing' : 'Paused'}</span>
+              <span className="text-sm sm:text-base">{isAutoPlaying ? 'Pause' : 'AutoPlay'}</span>
             </button>
             
             <a
               href="/services"
-              className="px-4 sm:px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-5 sm:px-7 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg"
             >
               View All Services
               <ArrowUpRight className="w-4 h-4" />
@@ -363,7 +363,7 @@ const ServicesCarousel = () => {
         }
 
         .shadow-3xl {
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
         }
 
         @media (max-width: 640px) {
@@ -376,4 +376,4 @@ const ServicesCarousel = () => {
   );
 };
 
-export default ServicesCarousel;
+export default Service;

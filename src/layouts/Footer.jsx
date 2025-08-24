@@ -5,11 +5,10 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
-  FaTwitter,
   FaYoutube,
-  FaTelegram
+  FaTelegram,
 } from "react-icons/fa";
-
+import { FaXTwitter } from "react-icons/fa6"
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300 py-10 ">
@@ -59,7 +58,7 @@ const Footer = () => {
             Contact Info
           </h3>
           <p>📍 3/677,2nd floor, Thaikavu Pukkattupady Road 
-          ,(Edappally toll Pukkattupady road),opp. Kingston Factory outlet or Veejay Enterprises,
+          ,(Edappally toll - Pukkattupady road),opp. Kingston Factory outlet or Veejay Enterprises,
             Thrikkakara P.O,Near Edappally,Pin : 682021, Ernakulam, Kerala
 </p>
           <p>📞 Phone: +91  8848839295 , 9745280649</p>
@@ -115,7 +114,7 @@ const Footer = () => {
               className="hover:text-black transition transform hover:scale-110"
 
             >
-              <FaTwitter />
+              <FaXTwitter/>
             </a>
             <a
               href="https://youtube.com/@identitypestcontrolservices?si=1JEdElFqelkm58HH"

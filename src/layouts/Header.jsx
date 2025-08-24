@@ -60,26 +60,21 @@ const Header = () => {
     <img
       src={Logo}
       alt="Logo"
-      className="w-26 h-auto object-contain m-0 p-0"
+      className="w-24 h-auto object-contain m-0 p-0"
     />
     {/* TM placed a little to right of logo */}
     <span
-      className="ml-1 flex items-center justify-center 
-                 w-5 h-5 text-[10px] font-bold border border-gray-600 rounded-full 
-                 bg-white text-gray-700"
-    >
-      TM
-    </span>
+  className="-ml-[6px] flex items-center justify-center 
+             w-5 h-5 text-[10px] font-bold border border-gray-600 rounded-full 
+             bg-white text-gray-700 mb-13"
+>
+  TM
+</span>
+
   </div>
 
   {/* Handwriting text with px size */}
-  <p
-    className="font-['Dancing_Script'] text-center m-0 p-0 -mt-5"
-    style={{ fontSize: "14px", lineHeight: "5px" }}
-  >
-    <span className="text-[#2F3CBF]">Pest-Free Living,</span>{" "}
-    <span className="text-[#35A853]">Peace of Mind</span>
-  </p>
+ 
 </motion.a>
 
 

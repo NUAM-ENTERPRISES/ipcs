@@ -46,7 +46,7 @@ const products = [
     galleryImages: [product, product1],
   },
   {
-    id: "ELECTRIC SHOCK FLY KILLER MACHINE",
+    id: "EXTERMINATOR - ELECTRIC SHOCK FLY KILLER MACHINE",
     title: "ELECTRIC SHOCK FLY KILLER MACHINE",
     desc: "Once the insects are towards the UV light source,they come into contact with an electrified grid or metal plate,which delivers a high- voltage shock to the flies,ultimately killing them.",
     features: [

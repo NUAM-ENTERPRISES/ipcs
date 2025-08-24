@@ -17,7 +17,8 @@ import new3 from "../assets/new3.jpeg";
 import iden13 from "../assets/iden13.png";
 import iden14 from "../assets/iden14.png";
 import iden15 from "../assets/iden15.png";
-
+import iden17 from "../assets/iden17.jpeg";
+import iden18 from "../assets/iden18.jpeg";
 // Service categories with descriptions
 const services = [
   { 
@@ -81,6 +82,8 @@ const images = [
   { src: iden13, service: "Other Services", title: "Snake Control", description: "Safe removal and relocation" },
   { src: iden14, service: "Bed Bug Control", title: "Room Fumigation", description: "Complete room treatment" },
   { src: iden15, service: "Other Services", title: "Fungus Control", description: "Wall and surface treatment" },
+  { src: iden17, service: "Other Services", title: "", description: "Wall and surface treatment" },
+  { src: iden18, service: "Other Services", title: "", description: "Wall and surface treatment" },
 ];
 
 const containerVariants = {

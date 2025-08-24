@@ -6,7 +6,7 @@ import Abouts from "../assets/Abouts.png";
 import About1 from "../assets/About1.png";
 import iden6 from "../assets/iden6.png";
 import About3 from "../assets/About3.png";
-import Homes from "../assets/Homes.jpg";
+import Homes from "../assets/Homes.jpeg";
 
 // Animation Variants
 const containerVariants = {
@@ -77,7 +77,7 @@ export default function About() {
 
   const stats = [
     { number: "10+", label: "Years Experience" },
-    { number: "1000+", label: "Happy Clients" },
+    { number: "5+", label: "Expert Technicians" },
     { number: "ISO", label: "Certified" },
     { number: "24/7", label: "Support" }
   ];
