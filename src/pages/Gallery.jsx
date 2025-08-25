@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Eye, Shield, CheckCircle, ArrowRight, Bug, Home, Factory } from "lucide-react";
-import new1 from "../assets/new1.jpeg";
-import iden1 from "../assets/iden1.png";
-import iden2 from "../assets/iden2.png";
+import B1 from "../assets/B1.png"
+import M1 from "../assets/M1.png"
 import iden3 from "../assets/iden3.png";
 import iden4 from "../assets/iden4.png";
 import iden5 from "../assets/iden5.png";
@@ -19,6 +18,9 @@ import iden14 from "../assets/iden14.png";
 import iden15 from "../assets/iden15.png";
 import iden17 from "../assets/iden17.jpeg";
 import iden18 from "../assets/iden18.jpeg";
+import Ant1 from "../assets/Ant1.png";
+
+import Ant4 from "../assets/Ant4.png";
 // Service categories with descriptions
 const services = [
   { 
@@ -67,23 +69,23 @@ const services = [
 
 // Image data with service mapping
 const images = [
-  { src: iden1, service: "General Pest Control", title: "Ants Control Treatment", description: "Complete ant colony elimination" },
-  { src: iden2, service: "General Pest Control", title: "Cockroach Control", description: "Kitchen and bathroom treatment" },
-  { src: iden3, service: "Crawling Pest Control", title: "Spider Web Removal", description: "Corner and ceiling cleaning" },
-  { src: iden4, service: "Termite Control", title: "Wood Protection", description: "Furniture and structure treatment" },
-  { src: iden5, service: "Mosquitoes Control", title: "Breeding Site Treatment", description: "Water source management" },
-  { src: iden6, service: "Rodent Control", title: "Rats & Mice Control", description: "Entry point sealing" },
-  { src: iden7, service: "Bed Bug Control", title: "Mattress Treatment", description: "Deep cleaning and fumigation" },
-  { src: iden8, service: "Other Services", title: "Disinfection Service", description: "Complete sanitization" },
-  { src: new2, service: "Crawling Pest Control", title: "Millipedes Control", description: "Garden and basement treatment" },
-  { src: iden10, service: "Termite Control", title: "Foundation Treatment", description: "Pre-construction protection" },
-  { src: iden11, service: "Other Services", title: "Flies Control", description: "Restaurant and kitchen areas" },
-  { src: new3, service: "Mosquitoes Control", title: "Outdoor Fogging", description: "Garden and yard treatment" },
-  { src: iden13, service: "Other Services", title: "Snake Control", description: "Safe removal and relocation" },
-  { src: iden14, service: "Bed Bug Control", title: "Room Fumigation", description: "Complete room treatment" },
-  { src: iden15, service: "Other Services", title: "Fungus Control", description: "Wall and surface treatment" },
-  { src: iden17, service: "Other Services", title: "", description: "Wall and surface treatment" },
-  { src: iden18, service: "Other Services", title: "", description: "Wall and surface treatment" },
+  { src: Ant1, service: "General Pest Control", title: "Ants Control Treatment",  },
+  { src: Ant4, service: "General Pest Control", title: "Cockroach Control",  },
+  { src: iden3, service: "Crawling Pest Control", title: "",  },
+  { src: iden4, service: "Termite Control", title: "Wood Protection",  },
+  { src: iden5, service: "Mosquitoes Control", title: "",  },
+  { src: iden6, service: "Rodent Control", title: "Rats & Mice Control",  },
+  { src: iden7, service: "Bed Bug Control", title: "",  },
+  { src: iden8, service: "Other Services", title: "Disinfection Service",  },
+  { src: iden4, service: "Crawling Pest Control", title: "Millipedes Control", },
+  { src: iden10, service: "Termite Control", title: "Foundation Treatment",  },
+  { src: iden11, service: "Other Services", title: "Flies Control",  },
+  { src: M1, service: "Mosquitoes Control", title: "",  },
+  { src: iden13, service: "Other Services", title: "Snake Control",  },
+  { src: B1, service: "Bed Bug Control", title: "",  },
+  { src: iden15, service: "Other Services", title: "Fungus Control",  },
+  { src: iden17, service: "Other Services", title: "",  },
+  { src: iden18, service: "Other Services", title: "",  },
 ];
 
 const containerVariants = {

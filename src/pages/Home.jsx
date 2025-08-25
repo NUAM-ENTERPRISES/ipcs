@@ -425,7 +425,7 @@ const cardVariants = {
     >
       {[
         "Government Approved Licensed Company",
-        "CIB Certified",
+        "CIB Approved Company",
         "100% Eco-Friendly Safe",
         "Expert Techs",
         "ISO Certified",
@@ -513,119 +513,170 @@ const cardVariants = {
 </section>
 
  
-      <section id="about" className="relative w-full py-20 px-6 md:px-16 bg-gradient-to-r from-[#1b51a1] to-[#575757] overflow-hidden">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 container mx-auto">
-          {/* Heading */}
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
-            initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            About <span className="text-pink-400">Us</span>
-          </motion.h2>
+      <section
+  id="about"
+  className="relative w-full py-20 px-6 md:px-16 bg-gradient-to-r from-[#1b51a1] to-[#575757] overflow-hidden"
+>
+  <div className="absolute inset-0 bg-black/30"></div>
+  <div className="relative z-10 container mx-auto">
+    {/* Heading */}
+    <motion.h2
+      className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
+      initial={{ opacity: 0, y: -40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      About <span className="text-pink-400">Us</span>
+    </motion.h2>
 
-          {/* Content & Image Layout */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16 items-start">
-            {/* About Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-gray-200 text-lg leading-relaxed mb-6">
-                The Identity Pest Control Services company (IPCS) is one of the best Residential & Commercial Pest Control Companies in Kerala, established in 2025 by a professional team with over 10 years of experience in the pest control industry. We are certified to ISO 9001:2015 and ISO 14001:2015, demonstrating our commitment to quality, customer satisfaction, and environmental management. Our focus is on helping organizations minimize their environmental impact and promote sustainability. Our trained and experienced staff and technicians can easily identify pest origins and eliminate pests from premises. IPCS is a government-approved and licensed company, using only Central Insecticides Board (CIB)-approved chemicals. We prioritize eco-friendly, innovative, and cost-effective quality services for our customers.
-              </p>
+    {/* Content & Image Layout */}
+    <div className="grid md:grid-cols-2 gap-12 mb-16 items-start">
+      {/* About Content */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <p className="text-gray-200 text-lg leading-relaxed mb-6">
+          The Identity Pest Control Services company (IPCS) is one of the best
+          Residential & Commercial Pest Control Companies in Kerala, established
+          in 2025 by a professional team with over 10 years of experience in the
+          pest control industry. We are certified to ISO 9001:2015 and ISO
+          14001:2015, demonstrating our commitment to quality, customer
+          satisfaction, and environmental management. Our focus is on helping
+          organizations minimize their environmental impact and promote
+          sustainability. Our trained and experienced staff and technicians can
+          easily identify pest origins and eliminate pests from premises. IPCS
+          is a government-approved and licensed company, using only Central
+          Insecticides Board (CIB)-approved chemicals. We prioritize
+          eco-friendly, innovative, and cost-effective quality services for our
+          customers.
+        </p>
 
-              {/* Mission, Vision & Values */}
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-2">Our Mission</h3>
-                  <p className="text-gray-300">
-                    Our mission is to provide safe, effective, and reliable pest management solutions while prioritizing customer satisfaction.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-2">Our Vision</h3>
-                  <p className="text-gray-300">
-                    Our vision is to deliver eco-friendly and safe pest control solutions that protect the environment.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-2">Our Values</h3>
-                  <ul className="text-gray-300 list-disc pl-5">
-                    <li><strong>Safety and Health:</strong> Ensuring the safety of technicians, customers, and employees is a top priority. We use eco-friendly methods to minimize risks.</li>
-                    <li><strong>Customer Satisfaction:</strong> We prioritize excellent service and building strong client relationships.</li>
-                    <li><strong>Innovation and Expertise:</strong> We stay updated with the latest pest control methods and technologies.</li>
-                    <li><strong>Ethics:</strong> We build trust through honesty, transparency, and ethical behavior.</li>
-                    <li><strong>Prevention:</strong> We educate customers on preventative measures to keep pests away.</li>
-                    <li><strong>Teamwork:</strong> Collaboration among employees ensures comprehensive and efficient service.</li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Image Layout: 4 Circular + 1 Square */}
-            <motion.div
-              className="relative flex flex-col items-center"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {/* 2x2 Grid of Circular Images */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <motion.img
-                  src={Abouts}
-                  alt="Team at work"
-                  className="rounded-full shadow-xl w-32 h-32 sm:w-40 sm:h-40 object-cover"
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  loading="lazy"
-                />
-                <motion.img
-                  src={About1}
-                  alt="Certified technician"
-                  className="rounded-full shadow-xl w-32 h-32 sm:w-40 sm:h-40 object-cover"
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  loading="lazy"
-                />
-                <motion.img
-                  src={iden6}
-                  alt="Pest control process"
-                  className="rounded-full shadow-xl w-32 h-32 sm:w-40 sm:h-40 object-cover"
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  loading="lazy"
-                />
-                <motion.img
-                  src={About3}
-                  alt="Eco-friendly service"
-                  className="rounded-full shadow-xl w-32 h-32 sm:w-40 sm:h-40 object-cover"
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Square Image with Up-Down Animation */}
-              <motion.img
-                src={Homes}
-                alt="Identity оформление Pest Control Services office"
-                className="rounded-lg shadow-2xl w-full max-w-sm sm:max-w-md object-cover"
-                variants={squareImageVariants}
-                animate="visible"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)" }}
-                loading="lazy"
-              />
-            </motion.div>
+        {/* Mission, Vision & Values */}
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-2">
+              Our Mission
+            </h3>
+            <p className="text-gray-300">
+              Our mission is to provide safe, effective, and reliable pest
+              management solutions while prioritizing customer satisfaction.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-2">
+              Our Vision
+            </h3>
+            <p className="text-gray-300">
+              Our vision is to deliver eco-friendly and safe pest control
+              solutions that protect the environment.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-2">
+              Our Values
+            </h3>
+            <ul className="text-gray-300 list-disc pl-5">
+              <li>
+                <strong>Safety and Health:</strong> Ensuring the safety of
+                technicians, customers, and employees is a top priority. We use
+                eco-friendly methods to minimize risks.
+              </li>
+              <li>
+                <strong>Customer Satisfaction:</strong> We prioritize excellent
+                service and building strong client relationships.
+              </li>
+              <li>
+                <strong>Innovation and Expertise:</strong> We stay updated with
+                the latest pest control methods and technologies.
+              </li>
+              <li>
+                <strong>Ethics:</strong> We build trust through honesty,
+                transparency, and ethical behavior.
+              </li>
+              <li>
+                <strong>Prevention:</strong> We educate customers on
+                preventative measures to keep pests away.
+              </li>
+              <li>
+                <strong>Teamwork:</strong> Collaboration among employees ensures
+                comprehensive and efficient service.
+              </li>
+            </ul>
           </div>
         </div>
-      </section> 
+      </motion.div>
+
+      {/* Image Layout with Hover Effect + Labels */}
+      <motion.div
+        className="relative grid grid-cols-2 gap-4"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        {[
+          { src: Abouts, alt: "Professional team", label: "Expert Team" },
+          { src: About1, alt: "Certified service", label: "ISO Certified" },
+          { src: iden6, alt: "Advanced equipment", label: "Modern Tech" },
+          { src: About3, alt: "Eco-friendly methods", label: "Eco-Friendly" },
+        ].map((image, index) => (
+          <motion.div
+            key={index}
+            className="relative group cursor-pointer"
+            whileHover={{
+              scale: 1.05,
+              rotate: index % 2 === 0 ? 2 : -2,
+              zIndex: 10,
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Hover Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            {/* Image */}
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg sm:rounded-2xl shadow-lg border-2 border-white"
+              loading="lazy"
+            />
+
+            {/* Label */}
+            <motion.div
+              className="absolute bottom-1 sm:bottom-2 left-1 sm:left-2 bg-white/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              initial={{ y: 10 }}
+              whileInView={{ y: 0 }}
+            >
+              <span className="text-xs sm:text-sm font-semibold text-gray-800">
+                {image.label}
+              </span>
+            </motion.div>
+          </motion.div>
+        ))}
+
+        {/* Extra Square Image (optional) */}
+        <motion.img
+          src={Homes}
+          alt="Identity Pest Control Office"
+          className="col-span-2 rounded-xl shadow-2xl w-full max-w-sm sm:max-w-md object-cover mx-auto mt-6"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+          }}
+          loading="lazy"
+        />
+      </motion.div>
+    </div>
+  </div>
+</section>
+
 
     <section
   id="why"

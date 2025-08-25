@@ -20,7 +20,7 @@ const contactInfo = [
     icon: Phone,
     title: "Call Us",
     href: "https://wa.me/+918848839295",
-    info: "+91 8848839295  9745280649",
+    info: "+91 8848839295 / 9745280649",
     subtitle: "24/7 Emergency Service",
     color: "from-green-500 to-emerald-600",
     delay: 0.1
@@ -29,7 +29,7 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     href: "mailto:identitypestcontrolservices@gmail.com",
-    info: "identitypestcontrolservices@gmail.com",
+    info: "identitypestcontrol   services@gmail.com",
     subtitle: "Quick Response Guaranteed",
     color: "from-blue-500 to-cyan-600",
     delay: 0.2
@@ -404,55 +404,119 @@ export default function ModernContact() {
                     </motion.div>
 
                     {/* Service Selection */}
-                    <motion.div
-                      className="relative"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <motion.select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        onFocus={() => setFocusedField('service')}
-                        onBlur={() => setFocusedField('')}
-                        className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 transition-all duration-300 text-sm sm:text-base"
-                        whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
-                      >
-                        <option value="" className="bg-gray-800">Select Service</option>
-                        <option value="general" className="bg-gray-800">General Pest Control</option>
-                        <option value="termite" className="bg-gray-800">Termite Control</option>
-                        <option value="rodent" className="bg-gray-800">Rodent Control</option>
-                        <option value="bedbug" className="bg-gray-800">Bed Bug Control</option>
-                        <option value="mosquito" className="bg-gray-800">Mosquito Control</option>
-                      </motion.select>
-                    </motion.div>
+{/* Category Dropdown */}
+<motion.div
+  className="relative mb-6"
+  whileHover={{ scale: 1.02 }}
+  transition={{ duration: 0.2 }}
+>
+  <motion.select
+    name="category"
+    value={formData.category}
+    onChange={handleInputChange}
+    onFocus={() => setFocusedField("category")}
+    onBlur={() => setFocusedField("")}
+    className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white 
+              focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 transition-all 
+              duration-300 text-sm sm:text-base"
+    whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
+  >
+    <option value="" className="bg-gray-800">Select Category</option>
+    <option value="service" className="bg-gray-800">Service</option>
+    <option value="product" className="bg-gray-800">Product</option>
+  </motion.select>
+</motion.div>
 
-                    {/* Message Field */}
-                    <motion.div
-                      className="relative"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <div className="relative">
-                        <MessageSquare 
-                          size={16} 
-                          className={`absolute left-3 sm:left-4 top-4 transition-colors duration-300 ${
-                            focusedField === 'message' ? 'text-blue-400' : 'text-gray-400'
-                          }`} 
-                        />
-                        <motion.textarea
-                          name="message"
-                          placeholder="Describe your pest problem..."
-                          rows={4}
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          onFocus={() => setFocusedField('message')}
-                          onBlur={() => setFocusedField('')}
-                          className="w-full pl-10 pr-3 py-3 sm:pl-12 sm:pr-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 transition-all duration-300 resize-none text-sm sm:text-base"
-                          whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
-                        />
-                      </div>
-                    </motion.div>
+{/* Service Dropdown (shown only if category = service) */}
+{formData.category === "service" && (
+  <motion.div
+    className="relative mb-6"
+    whileHover={{ scale: 1.02 }}
+    transition={{ duration: 0.2 }}
+  >
+    <motion.select
+      name="service"
+      value={formData.service}
+      onChange={handleInputChange}
+      onFocus={() => setFocusedField("service")}
+      onBlur={() => setFocusedField("")}
+      className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white 
+                focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 transition-all 
+                duration-300 text-sm sm:text-base"
+      whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
+    >
+      <option value="" className="bg-gray-800">Select Service</option>
+      <option value="general" className="bg-gray-800">General Pest Control</option>
+      <option value="termite" className="bg-gray-800">Termite Control</option>
+      <option value="rodent" className="bg-gray-800">Rodent Control</option>
+      <option value="bedbug" className="bg-gray-800">Bed Bug Control</option>
+      <option value="mosquito" className="bg-gray-800">Mosquito Control</option>
+      <option value="crawling" className="bg-gray-800">Crawling Pest Control Service</option>
+      <option value="flies" className="bg-gray-800">Flies Control Service</option>
+      <option value="disinfection" className="bg-gray-800">Disinfection / Sanitization Control Service</option>
+      <option value="silverfish" className="bg-gray-800">Silverfish & Firebrat Control Service</option>
+      <option value="snake" className="bg-gray-800">Snake Control Service</option>
+      <option value="fungus" className="bg-gray-800">Fungus Control Service</option>
+      <option value="dogtick" className="bg-gray-800">Dog Tick Control Service</option>
+      <option value="stored" className="bg-gray-800">Stored Insects Monitoring Control Service</option>
+    </motion.select>
+  </motion.div>
+)}
+
+{/* Product Dropdown (shown only if category = product) */}
+{formData.category === "product" && (
+  <motion.div
+    className="relative mb-6"
+    whileHover={{ scale: 1.02 }}
+    transition={{ duration: 0.2 }}
+  >
+    <motion.select
+      name="product"
+      value={formData.product}
+      onChange={handleInputChange}
+      onFocus={() => setFocusedField("product")}
+      onBlur={() => setFocusedField("")}
+      className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white 
+                focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 transition-all 
+                duration-300 text-sm sm:text-base"
+      whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
+    >
+      <option value="" className="bg-gray-800">Select Product</option>
+      <option value="EXTRACTOR - GLUE PAD FLY CATCHER MACHINE" className="bg-gray-800">EXTRACTOR - GLUE PAD FLY CATCHER MACHINE</option>
+      <option value="EXTERMINATOR - ELECTRIC SHOCK FLY KILLER MACHINE" className="bg-gray-800">EXTERMINATOR - ELECTRIC SHOCK FLY KILLER MACHINE</option>
+    </motion.select>
+  </motion.div>
+)}
+
+{/* Message Field (unchanged) */}
+<motion.div
+  className="relative"
+  whileHover={{ scale: 1.02 }}
+  transition={{ duration: 0.2 }}
+>
+  <div className="relative">
+    <MessageSquare 
+      size={16} 
+      className={`absolute left-3 sm:left-4 top-4 transition-colors duration-300 ${
+        focusedField === 'message' ? 'text-blue-400' : 'text-gray-400'
+      }`} 
+    />
+    <motion.textarea
+      name="message"
+      placeholder="Describe your pest problem..."
+      rows={4}
+      value={formData.message}
+      onChange={handleInputChange}
+      onFocus={() => setFocusedField('message')}
+      onBlur={() => setFocusedField('')}
+      className="w-full pl-10 pr-3 py-3 sm:pl-12 sm:pr-4 sm:py-4 bg-white/10 border border-white/20 rounded-2xl text-white 
+                placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 
+                transition-all duration-300 resize-none text-sm sm:text-base"
+      whileFocus={{ scale: 1.02, borderColor: "#60a5fa" }}
+    />
+  </div>
+</motion.div>
+
 
                     {/* Submit Button */}
                     <motion.button

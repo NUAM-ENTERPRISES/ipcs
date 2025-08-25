@@ -77,7 +77,7 @@ export default function About() {
 
   const stats = [
     { number: "10+", label: "Years Experience" },
-    { number: "5+", label: "Expert Technicians" },
+    // { number: "5+", label: "Expert Technicians" },
     { number: "ISO", label: "Certified" },
     { number: "24/7", label: "Support" }
   ];
