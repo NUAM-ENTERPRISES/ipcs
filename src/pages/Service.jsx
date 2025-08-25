@@ -14,7 +14,7 @@ const Service = () => {
       title: "General Pest Control Service",
       subtitle: " Home Protection",
       description: " Comprehensive pest elimination for homes with family-safe, eco-friendly treatments that protect your loved ones.",
-      features: ["Safe for Kids & Pets", "Eco-Friendly Products", "One-Time & Recurring", "Satisfaction Guaranteed"],
+      features: ["Safe for Kids & Pets", "Eco-Friendly Products", "One-Time & Recurring/Annually Contract", "Satisfaction Guaranteed"],
       color: "from-emerald-400 to-teal-600",
       bgColor: "from-emerald-50 to-teal-50",
       darkBg: "from-emerald-900 to-teal-900",
@@ -24,7 +24,7 @@ const Service = () => {
     {
       id: 2,
       title: "Crawling Pest Control Service",
-      subtitle: "Commercial Protection",
+      subtitle: "Commercial and Residential Protection",
       description: "Comprehensive pest management solutions for commercial spaces, ensuring a pest-free environment for your business.",
       features: ["Custom Plans", "Discreet Service", "Licensed Technicians", "Eco-Friendly Options"],
       color: "from-blue-400 to-indigo-600",
@@ -38,7 +38,7 @@ const Service = () => {
       title: "Termite Control Service",
       subtitle: "Structure Protection",
       description: "Advanced termite detection and elimination to protect your property's structural integrity.",
-      features: ["Pre & Post Construction", "5-Year Warranty", "Advanced Detection", "Preventive Barriers"],
+      features: ["Pre & Post Construction", "Upto 10-Year Warranty", "Advanced Detection", "Preventive Barriers"],
       color: "from-amber-400 to-orange-600",
       bgColor: "from-amber-50 to-orange-50",
       darkBg: "from-amber-900 to-orange-900",
@@ -47,10 +47,10 @@ const Service = () => {
     },
     {
       id: 4,
-      title: "Rodent Control",
+      title: "Rodent Control Service",
       subtitle: "Complete Elimination",
       description: "Effective rodent removal and prevention strategies to keep your space clean and hygienic.",
-      features: ["Humane Methods", "Entry Point Sealing", "Ongoing Monitoring", "Sanitation Advice"],
+      features: ["Humane Methods", "Ongoing Monitoring", "Sanitation Advice"],
       color: "from-purple-400 to-pink-600",
       bgColor: "from-purple-50 to-pink-50",
       darkBg: "from-purple-900 to-pink-900",
@@ -59,7 +59,7 @@ const Service = () => {
     },
     {
       id: 5,
-      title: "Mosquito Control",
+      title: "Mosquito Control Service",
       subtitle: "Disease Prevention",
       description: "Targeted mosquito control to reduce disease risks and create comfortable outdoor spaces.",
       features: ["Breeding Site Treatment", "Larvicide Application", "Natural Repellents", "Seasonal Programs"],
@@ -74,7 +74,7 @@ const Service = () => {
       title: "Bed Bug Control Service",
       subtitle: " Sleep Tight",
       description: "Comprehensive bed bug control solutions for a peaceful night's sleep.",
-      features: ["Thorough Inspection", "Heat Treatment", "Chemical Solutions", "Preventive Measures"],
+      features: ["Thorough Inspection", "Chemical Solutions", "Preventive Measures"],
       color: "from-rose-400 to-red-600",
       bgColor: "from-rose-50 to-red-50",
       darkBg: "from-rose-900 to-red-900",
@@ -278,7 +278,9 @@ const Service = () => {
                             <div className="text-base sm:text-lg font-bold text-white truncate">{service.price || "Custom Quote"}</div>
                             <div className="text-xs sm:text-sm text-gray-300 font-medium">Best Value</div>
                           </div>
+                          <a href='/contact'>
                           <button className={`
+                          
                             group px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm
                             bg-gradient-to-r ${service.color} text-white shadow-lg
                             hover:scale-105 transition-all duration-300
@@ -287,6 +289,7 @@ const Service = () => {
                             Book Now
                             <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                           </button>
+                            </a>
                         </div>
                       </div>
                     </div>

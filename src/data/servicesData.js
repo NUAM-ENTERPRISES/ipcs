@@ -287,7 +287,7 @@ const servicesData = [
         ],
         bulletPoints: [
           "Flies Control Service: Targeting house flies, fruit flies, and other flying pests.",
-          "Snake Control Service: Safe removal and prevention of snakes in and around properties.",
+          "Snake Control Service: Safe Repellent Technology and prevention of snakes in and around properties.",
           "Disinfection Service/Sanitization Control Service: Ensuring clean and hygienic environments.",
           "Fungus Control Service: Addressing mold and fungal growth in damp areas.",
           "Dog Tick Control Service: Protecting pets and homes from tick infestations.",

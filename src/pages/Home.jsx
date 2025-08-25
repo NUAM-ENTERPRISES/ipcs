@@ -220,7 +220,7 @@ const cardVariants = {
     {
       id: 2,
       title: "Crawling Pest Control Service",
-      subtitle: "Commercial Protection",
+      subtitle: "Commercial and Residential Protection",
       description: "Comprehensive pest management solutions for commercial spaces, ensuring a pest-free environment for your business.",
       features: ["Custom Plans", "Discreet Service", "Licensed Technicians", "Eco-Friendly Options"],
       color: "from-blue-400 to-indigo-600",
