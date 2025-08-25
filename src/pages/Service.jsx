@@ -55,7 +55,7 @@ const Service = () => {
       bgColor: "from-purple-50 to-pink-50",
       darkBg: "from-purple-900 to-pink-900",
       icon: "🐭",
-      price: "Starting ₹1499"
+      // price: "Starting ₹1499"
     },
     {
       id: 5,

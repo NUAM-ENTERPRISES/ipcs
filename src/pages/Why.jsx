@@ -240,7 +240,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
           >
             <span className="text-blue-300 font-semibold text-sm tracking-wider">
-              🏆 TRUSTED BY THOUSANDS
+              WHY IPCS
             </span>
           </motion.div>
           
