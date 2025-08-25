@@ -282,7 +282,7 @@ const cardVariants = {
       title: "Other Services",
       subtitle: " Featured Services",
       description: "Comprehensive pest control solutions for specialized needs and situations.",
-      features: ["Flies Control Service", "Snake Control Service", "Disinfection Service", "Fungus Control Service"],
+      features: ["Flies Control Service", "Snake Control Service", "Disinfection Service", "Fungus Control Service", "Dog Tick Control Service","Stored Insects Monitoring Control Service","Silverfish & Firebrat Control Service"],
       color: "from-indigo-400 to-purple-600",
       bgColor: "from-indigo-50 to-purple-50",
       darkBg: "from-indigo-900 to-purple-900",
@@ -880,6 +880,7 @@ const cardVariants = {
                             <div className="text-base sm:text-lg font-bold text-white truncate">{service.price}</div>
                             <div className="text-xs sm:text-sm text-gray-400">Best Value</div>
                           </div>
+                          <a href="/contact">
                           <button className={`
                             group px-3 sm:px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm
                             bg-gradient-to-r ${service.color} text-white
@@ -889,6 +890,7 @@ const cardVariants = {
                             Book Now
                             <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                           </button>
+                          </a>
                         </div>
                       </div>
                     </div>

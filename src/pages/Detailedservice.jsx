@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import servicesData from "../data/servicesData";
@@ -103,7 +103,9 @@ const Detailedservice = () => {
       transition: { duration: 2, ease: "easeOut" }
     }
   };
-
+ useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
