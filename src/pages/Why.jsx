@@ -28,7 +28,7 @@ const reasons = [
     images: [new1],
     icon: "🔍",
     color: "from-emerald-500 to-teal-600",
-    stats: { number: "100%", label: "Free Service" }
+    stats: { number: "100%", label: "Free Inspection" }
   },
   {
     id: 2,

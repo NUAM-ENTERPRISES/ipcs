@@ -425,9 +425,9 @@ const cardVariants = {
     >
       {[
         "Government Approved Licensed Company",
-        "CIB Approved Company",
+        "CIB Approved Chemicals",
         "100% Eco-Friendly Safe",
-        "Expert Techs",
+        "Experienced and Expert Technicians",
         "ISO Certified",
         "10+ Yrs Exp in Pest Control Industry",
         "24/7 Customer Support",
