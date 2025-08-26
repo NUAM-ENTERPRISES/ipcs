@@ -29,7 +29,7 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     href: "mailto:identitypestcontrolservices@gmail.com",
-    info: "identitypestcontrol   services@gmail.com",
+    info: "identitypestcontrolservices@gmail.com",
     subtitle: "Quick Response Guaranteed",
     color: "from-blue-500 to-cyan-600",
     delay: 0.2
